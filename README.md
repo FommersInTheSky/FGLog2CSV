@@ -77,17 +77,16 @@ Example:
 ```
 python parse_log_to_csv.py firewall_logs.txt
 ```
-creates: firewall_logs.txt.csv
+This creates: firewall_logs.txt.csv
 
 ## ⚙️ How It Works
-1️⃣ Field Discovery Phase -> scans the file once to find every distinct fieldname.
-
+1️⃣ Field Discovery Phase -> scans the file once to find every distinct fieldname.  
 2️⃣ CSV Writing Phase -> re‑reads the file and streams each parsed record directly to CSV.
 
 Progress percentage is printed based on bytes processed versus total file size.
 
 ## 📈 Performance
-Constant memory footprint (suitable for multi‑GB logs)
-Progress updates every ≈ 5 MB processed
-Gracefully ignores malformed or excess quotes
-No temporary data or intermediate buffers
+- Constant memory footprint (suitable for multi‑GB logs)
+- Progress updates every ≈ 5 MB processed
+- Gracefully ignores malformed or excess quotes
+- No temporary data or intermediate buffers
